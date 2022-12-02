@@ -1,0 +1,18 @@
+from client import client
+print("client info are: ")
+if client.full_name.isspace() and client.age.isspace() and client.id_no.isspace() and client.phone_number.isspace():
+    print("invalid name or age")
+else:
+    if not client.age.isdigit():
+        print("invalid age")
+    else:
+        try:
+            x = int(client.full_name)
+        except:
+            print("name: ", client.full_name)
+            print("age: ", client.age)
+            print("ID number: ", client.id_no)
+            print("phone number: ", client.phone_number)
+            print("ID: ", client.id)
+        else:
+            print("invalid name")
